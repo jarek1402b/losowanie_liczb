@@ -23,7 +23,7 @@ std::string pytanie(int numer_pytania)
 		return "Odejmij od siebie podane liczby :-)";
 			
 	if (numer_pytania==3)
-		return "Pomnoz ze soba podane liczby :-)";
+			return "Pomnoz ze soba podane liczby :-)";
 }
 
 int dodawanie(int p, int d)
@@ -92,7 +92,7 @@ int main(){
 	int odpowiedz = 0;
 	int liczba_punktowD = 0;
 	int liczba_punktowZ = 0;
-	std::string ask;
+	std::string question;
 	
 	for (int i=0;i<10;i++)
 	{
@@ -102,13 +102,16 @@ int main(){
 	
 		losowepytanie = losowaniepytania();	
 
-		if (liczba1 > 10 && liczba2 > 10 && losowepytanie==3)
-			losowepytanie = losowaniepytania();
+		question = pytanie(losowepytanie);
 
-		ask = pytanie(losowepytanie);
-
+		if (losowepytanie == 3)
+			do {
+				liczba1 = losowanieliczb();
+				liczba2 = losowanieliczb();
+			}
+			while (liczba1>10 && liczba2>10);
 		
-		std::cout << ask << std::endl;
+		std::cout << question << std::endl;
 		std::cout << liczba1 << " i " << liczba2 << std::endl;
 
 		std::cout << "Odpowiedz: ";
