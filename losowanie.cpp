@@ -6,59 +6,39 @@
 
 int losowanieliczb()
 {
-	int liczba = (rand()%100)+1;
-
-return liczba;
+	return (rand()%100)+1;
 }
 
 int losowaniepytania()
 {
-	int pytanie = (rand()%3)+1;
-
-return pytanie;
+	return (rand()%3)+1;
 }
 
 std::string pytanie(int numer_pytania)
 {
-		std::string napis1 = "Dodaj do siebie podane liczby :-)";
-		std::string napis2 = "Odejmij od siebie podane liczby :-)";		
-		std::string napis3 = "Pomnoz ze soba podane liczby :-)";
-
-		if (numer_pytania==1)
-			return napis1;
+	if (numer_pytania==1)
+		return "Dodaj do siebie podane liczby :-)";
 			
-		if (numer_pytania==2)
-			return napis2;
+	if (numer_pytania==2)
+		return "Odejmij od siebie podane liczby :-)";
 			
-		if (numer_pytania==3)
-			return napis3;
+	if (numer_pytania==3)
+		return "Pomnoz ze soba podane liczby :-)";
 }
 
 int dodawanie(int p, int d)
 {
-	int wynik = 0;
-	
-	wynik = p + d;
-
-return wynik;
+	return p + d;
 }
 
 int odejmowanie(int p, int d)
 {
-	int wynik = 0;
-	
-	wynik = p - d;
-
-return wynik;
+return p - d;
 }
 
 int mnozenie(int p, int d)
 {
-	int wynik = 0;
-	
-	wynik = p * d;
-
-return wynik;
+return p * d;
 }
 
 bool sprawdzenie(int odpowiedz, int liczbaP, int liczbaD, int numerpytania)
@@ -86,7 +66,6 @@ bool sprawdzenie(int odpowiedz, int liczbaP, int liczbaD, int numerpytania)
 		else
 			return false;
 	}
-
 }
 
 int main(){
